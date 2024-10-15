@@ -11,7 +11,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import Logo from "../../public/Images/ShivrajMobileLogo.png";
@@ -19,59 +19,7 @@ import { FaInstagram } from "react-icons/fa";
 import { SlSocialFacebook } from "react-icons/sl";
 import { FaWhatsapp } from "react-icons/fa";
 
-const components = [
-  {
-    title: "Trending Trips",
-    href: "/",
-    subLinks: [
-      {
-        title: "Upcoming Trips",
-        href: "/destination/upcomingTrip",
-      },
-      {
-        title: "Weekend Trips",
-        href: "/destination/weekendtrip",
-      },
-    ],
-  },
-  {
-    title: "International Trips - (comming soon)",
-    href: "/",
-    subLinks: [
-      {
-        title: "Dubai Trips",
-        href: "/",
-      },
-      {
-        title: "Maldives Trips",
-        href: "/",
-      },
-    ],
-  },
 
-  {
-    title: "India Packages",
-    href: "/packages",
-    subLinks: [
-      {
-        title: "Domestic Trips",
-        href: "/packages",
-      },
-      
-    ],
-  },
-
-  {
-    title: "Trending Romantic Journeys",
-    href: "/",
-    subLinks: [
-      {
-        title: "Honeymoon Packages",
-        href: "/destination/honeymoonTrip",
-      },
-    ],
-  },
-];
 
 export function NavigationMenuDemo() {
   return (
