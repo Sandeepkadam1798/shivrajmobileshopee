@@ -50,27 +50,23 @@ export default function Nav() {
       case "HOME":
         router.push("/");
         break;
-      case "Packages -":
+      case "Offers -":
         router.push("/");
         break;
-      case "Domestic Trips":
-        router.push("/packages");
+      case "Mobiles -":
+        router.push("/");
         break;
-      case "Upcoming trip":
-        router.push("/destination/upcomingTrip");
+      case "Furniture -":
+        router.push("/");
         break;
-      case "Weekend trip":
-        router.push("/destination/weekendtrip");
+      case "Furniture -":
+        router.push("/");
         break;
-      case "Romantic Escapes":
-        router.push("/destination/honeymoonTrip");
-        break;
+     
       case "blog":
         router.push("/Blogs");
         break;
-      case "Payments":
-        router.push("/payment");
-        break;
+ 
       case "CONTACT US":
         router.push("/Contactus");
         break;
@@ -88,9 +84,13 @@ export default function Nav() {
       case "/Blogs":
         setactiveitem("blog");
         break;
-      case "/payment":
-        setactiveitem("Payments");
+      case "/mobiles":
+        setactiveitem("Mobiles");
         break;
+      case "/furniture":
+        setactiveitem("Furniture");
+        break;
+   
       // case "/destination":
       //   setactiveitem("packages");
         break;
@@ -98,12 +98,7 @@ export default function Nav() {
         setactiveitem("CONTACT US");
         break;
 
-      case pathname.startsWith("/Jobdetails"):
-        setactiveitem("Careers");
-        break;
-      case pathname.startsWith("/Oursolution"):
-        setactiveitem("OUR SOLUTIONS");
-        break;
+ 
       default:
         setactiveitem("");
     }
