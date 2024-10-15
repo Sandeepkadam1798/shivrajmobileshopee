@@ -61,6 +61,10 @@ const config = {
   		}
   	}
   },
+  rules: {
+    "no-console": "off",
+    "react/prop-types": "off", // For React-specific ESLint rules
+  },
   plugins: [nextui(), require("tailwindcss-animate")],
 };
 
