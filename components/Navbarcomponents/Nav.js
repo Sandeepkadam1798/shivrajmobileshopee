@@ -8,19 +8,16 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   Link,
-  Button,
+ 
   Divider,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
+ 
   NavbarMenuItem,
 } from "@nextui-org/react";
 import Image from "next/image";
 import Logo from "../../public/Images/ShivrajMobileLogo.png";
 // import Logo2 from "../../public/Navabar/Logo2.png";
 import { NavigationMenuDemo } from "./Navmenu";
-import { FaPhone } from "react-icons/fa6";
+// import { FaPhone } from "react-icons/fa6";
 import {
   Sheet,
   SheetContent,
@@ -33,7 +30,7 @@ import {
 import { IoMdMenu } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 import { SlSocialFacebook } from "react-icons/sl";
 import { FaWhatsapp } from "react-icons/fa";
@@ -42,15 +39,10 @@ export default function Nav() {
   const router = useRouter();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+ 
   const [activeitem, setactiveitem] = useState();
-  const active =
-    "uppercase text-xs font-bold cursor-pointer list-none text-[#FF7143]";
-  const unactive = "uppercase text-xs font-bold cursor-pointer list-none";
-
-  const Extendmenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  
+  
   const linkitem = ["HOME","Offers","Mobiles","Furniture","blog", "CONTACT US"];
 
   const handleredirect = (link) => {

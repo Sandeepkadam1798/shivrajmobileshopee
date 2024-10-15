@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from "next/image";
-import { Search, Menu,Home,  Flag, Phone, Play } from "lucide-react";
+
+import { Search, Home,  Flag, Phone, Play } from "lucide-react";
 
 export default function MobileFooter() {
 

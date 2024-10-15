@@ -14,21 +14,11 @@
 
 "use client";
 import React from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 // import Socialmediafollow from "../Crouselcomponents/Socialmediafollow";
 
 
 const HeroSection = () => {
-  const [text] = useTypewriter({
-    words: [
-      "Connecting People.",
-      "Creating Memories.",
-      "Creating Stories.",
-      "Fulfilling Adventure",
-      "Spreading Happiness",
-    ],
-    loop: false,
-  });
+
 
   return (
     <div className="md:h-[30rem] lg:h-[30rem] overflow-hidden relative w-full ">
