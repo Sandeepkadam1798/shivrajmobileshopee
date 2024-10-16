@@ -43,7 +43,7 @@ export default function Nav() {
   const [activeitem, setactiveitem] = useState();
   
   
-  const linkitem = ["HOME","Offers","Mobiles","Furniture","blog", "CONTACT US"];
+  const linkitem = ["HOME","Offers","Mobiles","Furnitures","Laptops","blog", "CONTACT US"];
 
   const handleredirect = (link) => {
     switch (link) {
@@ -59,7 +59,7 @@ export default function Nav() {
       case "Furniture -":
         router.push("/");
         break;
-      case "Furniture -":
+      case "Laptops -":
         router.push("/");
         break;
      
@@ -89,6 +89,10 @@ export default function Nav() {
         break;
       case "/furniture":
         setactiveitem("Furniture");
+        break;
+   
+      case "/Laptops":
+        setactiveitem("Laptops");
         break;
    
       // case "/destination":

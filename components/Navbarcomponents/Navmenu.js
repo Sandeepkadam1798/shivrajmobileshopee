@@ -39,20 +39,20 @@ export function NavigationMenuDemo() {
                   >
                     <Image className="w-44" src={Logo} alt="logo" />
                     <div className="mb-2 mt-4 text-sm font-medium ">
-                      Vakratund - Tours and Adventure
+                    Welcome to Shivraj Mobile Shopee
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                     {`Founded in 2024, Vakratund Tours and Adventure offers heartfelt journeys that go beyond travel.`}
+                     {`Your one-stop shop for the latest mobiles and stylish furniture. Check out our daily offers!`}
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
               <ListItem href="/aboutus" title="Introduction">
-              {`Founded in 2024, Vakratund Tours and Adventure offers heartfelt journeys that go beyond travel.`}
+              {`Your one-stop shop for the latest mobiles and stylish furniture. Check out our daily offers!`}
 
               </ListItem>
               <ListItem href="/Contactus" title=" Get in Touch">
-                <span> Email : vakratundtour@gmail.com</span>
+                <span> Email : Info@gmail.com</span>
                 <span> Phone :9284205536</span>
               </ListItem>
               <ListItem
@@ -138,6 +138,13 @@ export function NavigationMenuDemo() {
           <Link href="/Blogs" legacyBehavior passHref>
             <NavigationMenuLink className={"text-sm font-medium text-white ml-5"}>
             Furniture
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/Blogs" legacyBehavior passHref>
+            <NavigationMenuLink className={"text-sm font-medium text-white ml-5"}>
+            Laptops
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
