@@ -6,9 +6,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeft, Volume2, VolumeX, Share2 ,Pause ,Play  } from 'lucide-react';
 
 const videos = [
-  { id: 1, src: 'https://player.vimeo.com/progressive_redirect/playback/943963402/rendition/1080p/file.mp4?loc=external&signature=f9ccc754006c29745a1e9ddc7b2b5f01d6a75904639767f772c7be73571fdbb3', title: 'Leh Ladakh Tour Packages', description: 'The heart of the Himalayan Wonderland' },
-  { id: 2, src: 'https://player.vimeo.com/progressive_redirect/playback/943968161/rendition/1080p/file.mp4?loc=external&signature=c0071a138028013aad9ca854005f23058e41bdf684ec84662bcc944b28f859ad', title: 'Bali Adventure', description: 'Explore the Island of Gods' },
-  { id: 3, src: 'https://player.vimeo.com/progressive_redirect/playback/943968161/rendition/1080p/file.mp4?loc=external&signature=c0071a138028013aad9ca854005f23058e41bdf684ec84662bcc944b28f859ad', title: 'Thailand Beaches', description: 'Discover tropical paradise' },
+  { id: 1, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729035942/F34B5AB4D1D2FCC9332E4E64873CAF84_video_dashinit_ckfau7.mp4', title: 'Leh Ladakh Tour Packages', description: 'The heart of the Himalayan Wonderland' },
+  { id: 2, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729036637/Shivraj/p5fom6hzkac0po6vtglz.mp4', title: 'Leh Ladakh Tour Packages', description: 'The heart of the Himalayan Wonderland' },
+  { id: 3, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729037216/Shivraj/lq7a95dhsolp5upavctu.mp4', title: 'Bali Adventure', description: 'Explore the Island of Gods' },
+  { id: 4, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729036179/Shivraj/b0boiwju9tamz7fjeife.mp4', title: 'Bali Adventure', description: 'Explore the Island of Gods' },
+  { id: 5, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729036233/Shivraj/qzptlktk6jkfgwve4cns.mp4', title: 'Thailand Beaches', description: 'Discover tropical paradise' },
+  { id: 6, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729036303/Shivraj/xhs1m0f8as02cghh9kgw.mp4', title: 'Thailand Beaches', description: 'Discover tropical paradise' },
+  { id: 7, src: 'https://res.cloudinary.com/diifdlgwr/video/upload/v1729037357/Shivraj/bqwxoabs8rxswo4i0aso.mp4', title: 'Thailand Beaches', description: 'Discover tropical paradise' },
 ];
 
 export default function VideoPage() {
