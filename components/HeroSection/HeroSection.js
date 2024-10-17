@@ -9,9 +9,9 @@ import React from "react";
 
 
 const HeroSection = () => {
-<style>
+{/* <style>
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-</style>
+</style> */}
 
   return (
     <div className="md:h-[30rem] lg:h-[30rem] overflow-hidden relative w-full ">
