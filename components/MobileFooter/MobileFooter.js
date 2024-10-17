@@ -15,7 +15,7 @@ export default function MobileFooter() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-orange-50 relative lg:hidden">
+    <div className="flex flex-col bg-orange-50 relative lg:hidden">
 
 
     <nav className="bg-orange-50 border-t border-gray-200 flex justify-around p-2 fixed bottom-0 left-0 right-0 lg:hidden">
