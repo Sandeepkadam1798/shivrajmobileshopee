@@ -8,6 +8,42 @@
   padding: 0px;
 }
 
+.yatra-one-regular {
+  font-family: "Yatra One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rozha-one-regular {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kalam-regular {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kalam-bold {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* styles.css */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 
 @layer base {
   :root {
