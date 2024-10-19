@@ -5,18 +5,19 @@ import CarouselDApiDemo from "@/components/OfferHeroCarousel/HeroCarousel";
 import ProductGrid from "../components/MobileProduct/MobileProduct";
 import MobileViewProduct from "@/components/MobileProduct/MobileViewProduct";
 
-
 export default function Home() {
   return (
-    <div className="">
+    <div className="w-full ">
+      <Nav />
+      <HeroSection />
+      <CarouselDApiDemo />
+      <div className="overflow-hidden">
 
-<Nav />
-      <HeroSection/>
-     <CarouselDApiDemo/>
-     <MobileViewProduct/>
-     <ProductGrid/>
-     
-     <MobileFooter/>
+      <MobileViewProduct />
+      </div>
+      <ProductGrid />
+
+      <MobileFooter />
     </div>
   );
 }
