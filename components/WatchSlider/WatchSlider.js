@@ -32,6 +32,9 @@ export default function WatchUI() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen back4 p-4">
+
+<h2 className="text-2xl font-bold">Newly Launched SmartWatch </h2>
+<h2 className="text-2xl font-bold mb-4">Deals</h2>
       
       {/* Top Belt */}
       <div className="w-32 h-14 bg-orange-500 rounded-b-lg mb-[-8px]"></div>
