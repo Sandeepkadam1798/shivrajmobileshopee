@@ -1,3 +1,5 @@
+
+
 // 'use client'
 
 // import React, { useRef, useState } from 'react';
@@ -92,12 +94,12 @@ const tripData = [
   // Add more trip objects
 ];
 
-export default function MobileViewProduct() {
+export default function OtherDealsForMobile() {
   return (
 
     <div className="w-full text-center mt-4 ">
     {/* Heading Section */}
-    <h2 className="text-2xl font-bold">Newly Launched iPhone </h2>
+    <h2 className="text-2xl font-bold">Newly Launched Android </h2>
     <h2 className="text-2xl font-bold mb-4">Deals</h2>
     <Swiper
       effect={'cards'}

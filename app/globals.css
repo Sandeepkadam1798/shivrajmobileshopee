@@ -166,7 +166,7 @@ body {
   color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
+/* .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }
 
@@ -204,4 +204,44 @@ body {
 
 .swiper-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
+} */
+
+
+.back2{
+  background: linear-gradient(rgba(255, 240, 231, 0) 0%, rgba(219, 255, 246, 0.8) 19.27%, rgba(255, 232, 219, 0.8) 88.54%, rgba(255, 240, 231, 0) 100%);
 }
+
+.back3 {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,           /* Transparent at the top */
+    rgba(173, 216, 230, 0.8) 20%,        /* Light blue */
+    rgba(240, 255, 240, 0.8) 50%,        /* Honeydew (light pastel green) */
+    rgba(255, 228, 225, 0.8) 80%,        /* Misty Rose (light pastel pink) */
+    rgba(255, 255, 255, 0) 100%          /* Transparent at the bottom */
+  );
+}
+
+
+.back {
+  background: linear-gradient(
+    to bottom,
+    rgba(213, 247, 228, 0) 0%,
+    rgba(255, 255, 236, 0) 0.52%,
+    rgba(255, 248, 209, 0.8) 19.27%,
+    rgba(255, 248, 209, 0.8) 88.54%,
+    rgba(255, 255, 236, 0) 100%
+  );
+}
+
+.back4 {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,           /* Fully transparent at the top */
+    rgba(232, 244, 252, 0.1) 5%,         /* Soft light blue-gray */
+    rgba(219, 232, 240, 0.8) 25%,        /* Muted light steel blue */
+    rgba(207, 223, 230, 0.8) 75%,        /* Light slate gray */
+    rgba(232, 244, 252, 0.1) 95%,        /* Soft light blue-gray */
+    rgba(255, 255, 255, 0) 100%          /* Fully transparent at the bottom */
+  );
+}
+
