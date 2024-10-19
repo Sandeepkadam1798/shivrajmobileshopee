@@ -3,6 +3,7 @@ import MobileFooter from "@/components/MobileFooter/MobileFooter";
 import Nav from "@/components/Navbarcomponents/Nav";
 import CarouselDApiDemo from "@/components/OfferHeroCarousel/HeroCarousel";
 import ProductGrid from "../components/MobileProduct/MobileProduct";
+import MobileViewProduct from "@/components/MobileProduct/MobileViewProduct";
 
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
 <Nav />
       <HeroSection/>
      <CarouselDApiDemo/>
+     <MobileViewProduct/>
      <ProductGrid/>
+     
      <MobileFooter/>
     </div>
   );
