@@ -3,14 +3,24 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { Search, Home, Flag, Phone, Play } from "lucide-react";
+import { OffersSheet } from "./OfferModal";
 
 export default function MobileFooter() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const handlePlayClick = () => {
     setIsLoading(true);
     router.push("/video");
+  };
+
+  const handleOffersClick = () => {
+    setIsSheetOpen(true); // Open the sheet when Offers button is clicked
+  };
+
+  const closeSheet = () => {
+    setIsSheetOpen(false); // Close the sheet
   };
 
   return (
@@ -20,7 +30,7 @@ export default function MobileFooter() {
           <Home className="w-6 h-6" />
           <span className="text-xs">Home</span>
         </button>
-        <button className="flex flex-col items-center ">
+        <button  onClick={handleOffersClick} className="flex flex-col items-center ">
           <Flag className="w-6 h-6" />
           <span className="text-xs">Offers</span>
         </button>
@@ -45,6 +55,7 @@ export default function MobileFooter() {
           <span className="text-xs">Contact</span>
         </button>
       </nav>
+      <OffersSheet isOpen={isSheetOpen} onClose={closeSheet} />
     </div>
   );
 }

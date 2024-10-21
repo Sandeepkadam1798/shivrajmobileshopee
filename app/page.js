@@ -7,6 +7,9 @@ import MobileViewProduct from "@/components/MobileProduct/MobileViewProduct";
 import BrandMarquee from "@/components/BrandMarquee/BrandMarquee";
 import OtherDealsForMobile from "@/components/MobileProduct/OtherDealsForMobile";
 import WatchSlider from "@/components/WatchSlider/WatchSlider";
+import LaptopsDeal from "@/components/LaptopsDeal/LaptopsDeal";
+import ElectronicsDeals from "@/components/ElectronicsDeals/ElectronicsDeals";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -33,19 +36,32 @@ export default function Home() {
     
       </div>
 
-      <div className=" back ">
-      
-      <WatchSlider/>
-    
-      </div>
+     
 
       
       <div className=" hidden lg:flex">
       <ProductGrid />
 
       </div>
-      
 
+      <div className="z-10 lg:hidden ">
+      
+      <LaptopsDeal/>
+    
+      </div>
+      <div className=" ">
+      
+      <WatchSlider/>
+    
+      </div>
+      <div className="overflow-hidden  lg:hidden ">
+      
+      <ElectronicsDeals/>
+    
+      </div>
+      
+      
+      <Footer/>
       <MobileFooter />
     </div>
   );

@@ -51,6 +51,7 @@ import Iphone14 from '../../public/Images/Iphone14.png'
 import Iphone13 from '../../public/Images/Iphone13.png'
 import Iphone12 from '../../public/Images/Iphone12.png'
 import Iphone11 from '../../public/Images/Iphone11.png'
+import { Button } from '@nextui-org/react';
 // Array of objects with image, title, and price
 const tripData = [
   {
@@ -115,9 +116,12 @@ export default function MobileViewProduct() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-xl"></div>
 
             {/* Title and price at the bottom */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <div className="absolute bottom-0 left-0 right-0 p-2 text-white">
               <h3 className="text-lg font-bold">{trip.title}</h3>
               <p className="text-sm">{trip.price}</p>
+              <Button radius="full"  className="bg-gradient-to-tr text-sm font-bold p-0 mt-1 from-pink-500 to-yellow-500 text-white shadow-lg">
+      View
+    </Button>
             </div>
           </div>
         </SwiperSlide>
