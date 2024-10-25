@@ -4,50 +4,50 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 // import Image from "next/image";
-import Iphone16 from "../../public/Images/Iphone16.png";
-import Iphone15 from "../../public/Images/Iphone15.png";
-import Iphone14 from "../../public/Images/Iphone14.png";
-import Iphone13 from "../../public/Images/Iphone13.png";
-import Iphone12 from "../../public/Images/Iphone12.png";
-import Iphone11 from "../../public/Images/Iphone11.png";
+import AppleSmartWatch from "../../public/Images/AppleSmartWatch.png";
+import SamsungSmartWatch from "../../public/Images/SamsungSmartWatch.png";
+import FireBoltWatch from "../../public/Images/FireBoltWatch.png";
+import NoiseSmartWatch from "../../public/Images/NoiseSmartWatch.png";
+
 import { Info, Sparkles } from 'lucide-react';
-import { Image } from "@nextui-org/react";
+import Image from "next/image";
+
 
 const products = [
   {
     id: 1,
-    name: "SuperPhone X",
+    name: "Apple Watch Series",
     color: "Midnight Black",
-    price: 999,
-    image: Iphone16,
+    price: "29,999",
+    image: AppleSmartWatch,
   },
   {
     id: 2,
-    name: "SuperPhone X",
+    name: "Samsung SmartWatch ",
     color: "Stellar Silver",
-    price: 999,
-    image: Iphone15,
+    price: "1,900",
+    image: SamsungSmartWatch,
   },
   {
     id: 3,
-    name: "SuperPhone X",
+    name: "FireBolt Smart Watch",
     color: "Cosmic Gold",
     price: 999,
-    image: Iphone16,
+    image: FireBoltWatch,
   },
   {
     id: 4,
     name: "SuperPhone X",
     color: "Aurora Green",
     price: 999,
-    image: Iphone13,
+    image: FireBoltWatch,
   },
   {
     id: 5,
-    name: "SuperPhone X",
+    name: "Noise SmartWatch",
     color: "Ocean Blue",
     price: 999,
-    image: Iphone15,
+    image: NoiseSmartWatch,
   },
 ];
 
@@ -90,19 +90,21 @@ export default function WatchUI() {
             <Card className="w-full h-[180px] border-none shadow-none">
               <CardContent className="p-2">
                 <Image
-                 isBlurred
+                 height={300}
+                 width={300}
                   src={products[currentIndex].image.src}
                   alt={products[currentIndex].name}
-                  className="w-full h-40 object-cover rounded-lg mb-2"
+                  className="w-full h-40 object-fill rounded-lg mb-2"
                 />
-                <h3 className="text-sm font-semibold">
+                <h3 className="text-medium font-semibold">
                   {products[currentIndex].name}
                 </h3>
                 <p className="text-xs text-gray-500">
-                  {products[currentIndex].color}
+                  {/* {products[currentIndex].color} */}
+                  Starting Price
                 </p>
                 <p className="text-sm font-bold mt-1">
-                  ${products[currentIndex].price}
+                ₹{products[currentIndex].price}
                 </p>
               </CardContent>
             </Card>

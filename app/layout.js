@@ -1,6 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./Provider";
+import Nav from "@/components/Navbarcomponents/Nav";
+import BrandMarquee from "@/components/BrandMarquee/BrandMarquee";
+import Footer from "@/components/Footer/Footer";
+import MobileFooter from "@/components/MobileFooter/MobileFooter";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,22 +27,37 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link
+        <link
           href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap"
           rel="stylesheet"
         />
-   <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet"/>
-   <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet"/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <Providers>
-        
-         {children}
+        <Providers>
+          <div className="lg:flex hidden">
+            <BrandMarquee />
+          </div>
+          <div>
+            <Nav />
+          </div>
 
-         </Providers>
-      
+          {children}
+          <div className="hidden ">
+            <Footer />
+          </div>
+
+          <MobileFooter />
+        </Providers>
       </body>
     </html>
   );

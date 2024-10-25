@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-11/12 mx-auto z-10 bg-white md:mb-0 lg:mb-0 mb-8">
+        <div className="w-11/12 mx-auto z-10 bg-white md:mb-0 lg:mb-0 mb-8 ">
           <Divider orientation="horizontal" />
         </div>
 

@@ -10,7 +10,11 @@ import Iphone14 from "../../public/Images/Iphone14.png";
 import Iphone13 from "../../public/Images/Iphone13.png";
 import Iphone12 from "../../public/Images/Iphone12.png";
 import Iphone11 from "../../public/Images/Iphone11.png";
-import { Image } from '@nextui-org/react';
+import Image from 'next/image';
+
+import { useDisclosure } from '@nextui-org/react';
+import ContactFormModal from '../ContactFormModal/ContactFormModal';
+
 
 const initialOffers = [
   {
@@ -51,9 +55,10 @@ const initialOffers = [
   },
 ];
 
-export function OffersSheet({ isOpen, onClose }) {
+export function OffersSheet({ isOpen1, onClose1 }) {
   const [currentOffer, setCurrentOffer] = useState(0);
   const [offers, setOffers] = useState(initialOffers);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
   useEffect(() => {
     // Generate random hours for each offer on the initial render
@@ -73,7 +78,9 @@ export function OffersSheet({ isOpen, onClose }) {
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={onClose} >
+    <>
+    
+    <Sheet open={isOpen1} onOpenChange={onClose1} >
       <SheetContent side="bottom" className=" overflow-y-auto ">
         <SheetHeader>
           <SheetTitle className="text-2xl font-bold text-center">Daily Hot Deals!</SheetTitle>
@@ -85,9 +92,9 @@ export function OffersSheet({ isOpen, onClose }) {
               <div className="p-6 space-y-4">
                 <Badge className="mb-2">{offers[currentOffer].category}</Badge>
                 <Image
-                  src={offers[currentOffer].image.src}
+                  src={offers[currentOffer].image}
                   alt={offers[currentOffer].name}
-                  className="w-full h-48 object-cover mb-4"
+                  className="w-full h-48 object-cover mb-4 rounded-md"
                 />
                 <h3 className="text-xl font-semibold">{offers[currentOffer].name}</h3>
                 <div className="flex justify-between items-center">
@@ -107,9 +114,10 @@ export function OffersSheet({ isOpen, onClose }) {
                 <div className="text-sm text-red-600">
                   Hurry, only {offers[currentOffer].hoursLeft} hours left!
                 </div>
-                <Button className="w-full mt-4 bg-orange-500" size="lg">
-                  Buy Now
+                <Button className="w-full mt-4 " size="lg" onClick={onOpen}>
+                Get Enquiry
                 </Button>
+                
               </div>
             </div>
 
@@ -137,6 +145,9 @@ export function OffersSheet({ isOpen, onClose }) {
           </div>
         </div>
       </SheetContent>
+      
     </Sheet>
+    <ContactFormModal isOpen={isOpen} onOpenChange={onOpenChange} />
+    </>
   );
 }

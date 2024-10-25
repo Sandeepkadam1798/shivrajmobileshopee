@@ -10,59 +10,45 @@ import WatchSlider from "@/components/WatchSlider/WatchSlider";
 import LaptopsDeal from "@/components/LaptopsDeal/LaptopsDeal";
 import ElectronicsDeals from "@/components/ElectronicsDeals/ElectronicsDeals";
 import Footer from "@/components/Footer/Footer";
+import IphonesDealsMobileView from "./iphonesDeals/page";
 
 export default function Home() {
   return (
     <div className="w-full ">
-         <div className="lg:flex hidden">
-      <BrandMarquee/>
-      </div>
-      
-      <Nav />
-   
+      {/* <div className="lg:flex hidden">
+        <BrandMarquee />
+      </div> */}
+
+      {/* <Nav /> */}
+
       <HeroSection />
       <CarouselDApiDemo />
       <div className="lg:hidden">
-      <BrandMarquee/>
+        <BrandMarquee />
       </div>
       <div className="overflow-hidden back mt-6 lg:hidden">
-      
-      <MobileViewProduct />
-    
+        <IphonesDealsMobileView />
       </div>
       <div className="overflow-hidden back2 mt-6 lg:hidden mb-8">
-      
-      <OtherDealsForMobile/>
-    
+        <OtherDealsForMobile />
       </div>
 
-     
-
-      
       <div className=" hidden lg:flex">
-      <ProductGrid />
-
+        <ProductGrid />
       </div>
 
-      <div className="z-10 lg:hidden ">
-      
-      <LaptopsDeal/>
-    
+      <div className=" lg:hidden ">
+        <LaptopsDeal />
       </div>
       <div className=" ">
-      
-      <WatchSlider/>
-    
+        <WatchSlider />
       </div>
       <div className="overflow-hidden  lg:hidden ">
-      
-      <ElectronicsDeals/>
-    
+        <ElectronicsDeals />
       </div>
-      
-      
-      <Footer/>
-      <MobileFooter />
+
+      {/* <Footer /> */}
+      {/* <MobileFooter /> */}
     </div>
   );
 }

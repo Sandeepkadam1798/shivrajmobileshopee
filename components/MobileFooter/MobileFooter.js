@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { Search, Home, Flag, Phone, Play } from "lucide-react";
+import { Search, Home, Flag, Phone, Play,  } from "lucide-react";
 import { OffersSheet } from "./OfferModal";
+import Link from "next/link";
 
 export default function MobileFooter() {
   const router = useRouter();
@@ -24,12 +25,19 @@ export default function MobileFooter() {
   };
 
   return (
-    <div className="flex flex-col bg-orange-50 sticky bottom-0 z-10 lg:hidden w-full ">
+    <div className="flex flex-col bg-orange-50 fixed bottom-0 z-10 lg:hidden w-full ">
       <nav className="bg-orange-50 border-t border-gray-200 flex justify-around p-2  w-full  lg:hidden">
-        <button className="flex flex-col items-center text-orange-500">
+        
+          <Link href="/">
+          <button className="flex flex-col items-center text-orange-500">
+
           <Home className="w-6 h-6" />
           <span className="text-xs">Home</span>
+
+         
+       
         </button>
+        </Link>
         <button  onClick={handleOffersClick} className="flex flex-col items-center ">
           <Flag className="w-6 h-6" />
           <span className="text-xs">Offers</span>
@@ -55,7 +63,7 @@ export default function MobileFooter() {
           <span className="text-xs">Contact</span>
         </button>
       </nav>
-      <OffersSheet isOpen={isSheetOpen} onClose={closeSheet} />
+      <OffersSheet isOpen1={isSheetOpen} onClose1={closeSheet} />
     </div>
   );
 }
