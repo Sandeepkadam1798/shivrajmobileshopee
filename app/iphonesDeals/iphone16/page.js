@@ -5,12 +5,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Smartphone, ChevronLeft, ChevronRight } from "lucide-react"
 import Iphone16 from '../../../public/Images/Iphone16.png'
+import Apple16Hero from '../../../public/Images/Apple16Hero.png'
 import Iphone15 from '../../../public/Images/Iphone15.png'
 import ShivrajMobileLogo from '../../../public/Images/ShivrajMobileLogo.png'
 import Iphone14 from '../../../public/Images/Iphone14.png'
 import Iphone13 from '../../../public/Images/Iphone13.png'
 import Iphone12 from '../../../public/Images/Iphone12.png'
 import Iphone11 from '../../../public/Images/Iphone11.png'
+import { ArrowRight, Watch, Heart, Zap } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -22,7 +24,7 @@ import {
 import Image from "next/image"
 import { useDisclosure } from "@nextui-org/react"
 import ContactFormModal from "@/components/ContactFormModal/ContactFormModal"
-
+import SamsungSmartWatchHero from "../../../public/Images/SamsungSmartWatchHero.png";
 
 const iPhoneModels = [
   {
@@ -117,11 +119,59 @@ export default function IPhone16Series() {
     <div className="min-h-screen"  style={{
       background: "linear-gradient(to right, #FFDEE9, #B5FFFC)",
     }}>
-      <div className="max-w-7xl mx-auto  py-16 px-4">
-      <h1 className="text-5xl font-extrabold text-center mb-16">Iphone 16 Series</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<section className="relative">
+        <div className=" rounded-3xl overflow-hidden">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+              <div className="mb-12 lg:mb-0 ml-4">
+                <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-5xl lg:font-bold mb-6">
+                Iphone 16 Series
+                </h1>
+                <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+                  Experience the perfect blend of style and technology with our
+                  cutting-edge wearable devices.
+                </p>
+                {/* <div className="mt-12 grid grid-cols-3 gap-4">
+                  <div className="flex items-center">
+                    <Watch className="h-6 w-6 text-primary mr-2" />
+                    <span className="text-sm font-medium">Premium Design</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Heart className="h-6 w-6 text-primary mr-2" />
+                    <span className="text-sm font-medium">Health Tracking</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Zap className="h-6 w-6 text-primary mr-2" />
+                    <span className="text-sm font-medium">
+                      Long Battery Life
+                    </span>
+                  </div>
+                </div> */}
+              </div>
+              <div className="relative h-64 sm:h-72 md:h-96 lg:h-96 ">
+                <Image
+                  src={Apple16Hero}
+                  alt="OPPO Wearables"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div className="max-w-7xl mx-auto  px-4  pb-12">
+      <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">
+          Products
+        </h1>
+      {/* <h1 className="text-5xl font-extrabold text-center mb-16">Iphone 16 Series</h1> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {iPhoneModels.map((model, index) => (
-            <Card key={index} className="flex flex-col justify-between">
+            <Card key={index} className="flex flex-col justify-between ">
               {/* <CardHeader>
                               </CardHeader> */}
               <CardContent className="py-4 ">

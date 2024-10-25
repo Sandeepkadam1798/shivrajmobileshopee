@@ -8,9 +8,11 @@ import AppleSmartWatch from "../../public/Images/AppleSmartWatch.png";
 import SamsungSmartWatch from "../../public/Images/SamsungSmartWatch.png";
 import FireBoltWatch from "../../public/Images/FireBoltWatch.png";
 import NoiseSmartWatch from "../../public/Images/NoiseSmartWatch.png";
+import AppleSmartWatchHero from "../../public/Images/AppleSmartWatchHero.png";
 
 import { Info, Sparkles } from 'lucide-react';
 import Image from "next/image";
+import Link from "next/link";
 
 
 const products = [
@@ -19,14 +21,16 @@ const products = [
     name: "Apple Watch Series",
     color: "Midnight Black",
     price: "29,999",
-    image: AppleSmartWatch,
+    image: AppleSmartWatchHero,
+    url: "/SmartWatchDeals/AppleWatch"  // Example link
   },
   {
     id: 2,
-    name: "Samsung SmartWatch ",
+    name: "Samsung SmartWatch",
     color: "Stellar Silver",
     price: "1,900",
     image: SamsungSmartWatch,
+    url: "/SmartWatchDeals/SamsungWatch"  // Example link
   },
   {
     id: 3,
@@ -34,13 +38,15 @@ const products = [
     color: "Cosmic Gold",
     price: 999,
     image: FireBoltWatch,
+    url: "/firebolt-smart-watch"  // Example link
   },
   {
     id: 4,
     name: "SuperPhone X",
     color: "Aurora Green",
     price: 999,
-    image: FireBoltWatch,
+    image: SamsungSmartWatch,
+    url: "/superphone-x"  // Example link
   },
   {
     id: 5,
@@ -48,6 +54,7 @@ const products = [
     color: "Ocean Blue",
     price: 999,
     image: NoiseSmartWatch,
+    url: "/noise-smartwatch"  // Example link
   },
 ];
 
@@ -87,6 +94,8 @@ export default function WatchUI() {
             {/* <div className="text-center text-sm font-semibold text-gray-500">Watch UI</div> */}
 
             {/* Card for Product */}
+
+            <Link href={products[currentIndex].url}  rel="noopener noreferrer">
             <Card className="w-full h-[180px] border-none shadow-none">
               <CardContent className="p-2">
                 <Image
@@ -108,6 +117,8 @@ export default function WatchUI() {
                 </p>
               </CardContent>
             </Card>
+            </Link>
+          
 
             {/* Buttons for slide navigation */}
             <div className="flex justify-between items-center p-2">

@@ -25,11 +25,14 @@ export default function ContactFormModal({ isOpen, onOpenChange }) {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="flex flex-col ">
+                <div>
                 <p>
                 Share your contact details below 
                 </p>
                 <p>team will get in touch with you..!</p>
+                </div>
+          
                 
               </ModalHeader>
               <ModalBody>
@@ -39,6 +42,7 @@ export default function ContactFormModal({ isOpen, onOpenChange }) {
                     <Input placeholder="Mobile Number" required />
                     <Input placeholder="Email Address" />
                     <Input placeholder="Model of Interest (e.g., Galaxy S)" />
+                    <Input placeholder="Message" />
 
                     <Button type="submit"  className="bg-gradient-to-tr w-full from-pink-500 to-yellow-500 text-white shadow-lg">
                       Submit

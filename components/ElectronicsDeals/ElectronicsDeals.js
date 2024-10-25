@@ -6,7 +6,8 @@ import Iphone14 from "../../public/Images/Iphone14.png";
 import Iphone13 from "../../public/Images/Iphone13.png";
 import Iphone12 from "../../public/Images/Iphone12.png";
 import Iphone11 from "../../public/Images/Iphone11.png";
-import { Button, Image } from '@nextui-org/react';
+import { Button, } from '@nextui-org/react';
+import Image from 'next/image';
 
 
 
@@ -41,7 +42,7 @@ function ElectronicsDeals() {
       <div className="grid grid-cols-2 gap-4 mb-4">
         {products.map((item, index) => (
           <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-            <Image src={item.image.src} isBlurred alt="Product" className="w-full h-32 object-cover" />
+            <Image src={item.image.src} height={100} width={100} alt="Product" className="w-full h-32 object-cover" />
             <div className="p-2">
               <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-sm">{item.discount} off</span>
               <p className="text-xs mt-1">Great Indian Festival</p>
