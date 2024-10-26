@@ -75,10 +75,10 @@ const ProductCard = ({ product }) => {
           <p>Starting Price</p>
           <span className="text-lg font-bold text-black ">₹{product.discountedPrice}</span>
         </div>
-        <span className="text-xs font-medium text-white bg-purple-200 rounded px-2 py-1 inline-block mb-4">
+        <span className="text-xs font-medium text-white bg-purple-400 rounded px-2 py-1 inline-block mb-4">
           {product.discountLabel}
         </span>
-        <button className="w-full mb-2 mt-auto  border border-blue-500 text-blue-500 rounded-md py-2 text-sm md:text-base font-medium hover:bg-blue-100 transition">
+        <button className="w-full mb-2 mt-auto underline  text-orange-500 rounded-md py-2 text-sm md:text-base font-medium hover:bg-blue-100 transition">
       View 
       </button>
       </div>
