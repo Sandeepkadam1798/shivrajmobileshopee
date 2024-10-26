@@ -149,7 +149,7 @@ export default function SamsungDeals() {
             Samsung Galaxy S24 Series
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-            Discover the ultimate smartphone experience with Samsung's Galaxy S24 series, blending advanced features with stunning design.
+        {`Discover the ultimate smartphone experience with Samsung's Galaxy S24 series, blending advanced features with stunning design.`}
           </p>
           {/* Uncomment and modify this section if needed
           <div className="mt-12 grid grid-cols-3 gap-4">
