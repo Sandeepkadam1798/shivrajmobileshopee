@@ -47,16 +47,16 @@ export default function RootLayout({ children }) {
           <div className="lg:flex hidden">
             <BrandMarquee />
           </div>
-          <div>
+          {/* <div>
             <Nav />
-          </div>
+          </div> */}
 
           {children}
           <div className="hidden ">
             <Footer />
           </div>
 
-          <MobileFooter />
+          {/* <MobileFooter /> */}
         </Providers>
       </body>
     </html>

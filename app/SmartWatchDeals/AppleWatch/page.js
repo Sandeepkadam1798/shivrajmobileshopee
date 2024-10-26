@@ -5,6 +5,8 @@ import { ArrowRight, Watch, Heart, Zap } from "lucide-react";
 import AppleSmartWatchHero from "../../../public/Images/AppleSmartWatchHero.png";
 import Iphone16 from "../../../public/Images/Iphone16.png";
 import Iphone15 from "../../../public/Images/Iphone15.png";
+import Nav from "@/components/Navbarcomponents/Nav";
+import MobileFooter from "@/components/MobileFooter/MobileFooter";
 
 export default function WearablesShowcase() {
   const products = [
@@ -59,6 +61,9 @@ export default function WearablesShowcase() {
   ];
 
   return (
+    <>
+    <Nav/>
+
     <div className=" mx-auto px-4 py-8">
       <section className="relative">
         <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-background rounded-3xl overflow-hidden">
@@ -146,5 +151,8 @@ export default function WearablesShowcase() {
         </div>
       </div>
     </div>
+    <MobileFooter/>
+    </>
+  
   );
 }

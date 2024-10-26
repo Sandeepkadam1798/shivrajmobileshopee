@@ -19,7 +19,7 @@ export default function Home() {
         <BrandMarquee />
       </div> */}
 
-      {/* <Nav /> */}
+      <Nav />
 
       <HeroSection />
       <CarouselDApiDemo />
@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* <Footer /> */}
-      {/* <MobileFooter /> */}
+      <MobileFooter />
     </div>
   );
 }

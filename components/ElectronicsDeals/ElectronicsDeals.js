@@ -1,62 +1,51 @@
-import React from 'react';
-import { Info, Sparkles } from 'lucide-react';
-import Iphone16 from "../../public/Images/Iphone16.png";
-import Iphone15 from "../../public/Images/Iphone15.png";
-import Iphone14 from "../../public/Images/Iphone14.png";
-import Iphone13 from "../../public/Images/Iphone13.png";
-import Iphone12 from "../../public/Images/Iphone12.png";
-import Iphone11 from "../../public/Images/Iphone11.png";
-import { Button, } from '@nextui-org/react';
-import Image from 'next/image';
 
 
 
-const products = [
-  {
-    image: Iphone16, // Replace with actual image URL
-    discount: '20%',
-  },
-  {
-    image: Iphone15, // Replace with actual image URL
-    discount: '15%',
-  },
-  {
-    image: Iphone12, // Replace with actual image URL
-    discount: '10%',
-  },
-  {
-    image:Iphone11, // Replace with actual image URL
-    discount: '25%',
-  },
-];
 
-function ElectronicsDeals() {
+
+import Image from 'next/image'
+import React from 'react'
+import HomeAppliences from "../../public/Images/HomeAppliences.png"
+import { Button } from '../ui/button'
+import Link from 'next/link'
+
+const ElectronicsDeals = () => {
   return (
-    <div className="bg-gradient-to-b from-orange-200 to-pink-200 p-4 max-w-md mx-auto">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold">Deals in Electronics</h2>
-        {/* <div className="flex items-center text-sm text-gray-600">
-          Sponsored <Info className="w-4 h-4 ml-1" />
-        </div> */}
-      </div>
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        {products.map((item, index) => (
-          <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-            <Image src={item.image.src} height={100} width={100} alt="Product" className="w-full h-32 object-cover" />
-            <div className="p-2">
-              <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-sm">{item.discount} off</span>
-              <p className="text-xs mt-1">Great Indian Festival</p>
-            </div>
+    <div style={{ background: "linear-gradient(to right, #E0EAFC, #CFDEF3)" }}> <section className="relative">
+    <div className="rounded-3xl overflow-hidden">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+          <div className=" lg:mb-0 ml-4">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-5xl lg:font-bold mb-6">
+            Elevate Your Home with Premium Appliances
+            </h1>
+
+
+            <Link href={"/HomeAppliances"}>
+            <button className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md shadow-md hover:bg-orange-700 transition duration-200 hover:shadow-lg">
+              View Products
+            </button>
+            </Link>
+            
+            {/* <p className="text-xl text-muted-foreground  max-w-2xl">
+              {`Discover our latest range of home appliances, crafted to bring both elegance and efficiency to your everyday life. Designed with advanced technology and built for comfort and ease.`}
+            </p> */}
           </div>
-        ))}
-      </div>
-      <Button className="w-full bg-orange-600 text-white py-2 rounded-md font-medium">See all deals in Electronics</Button>
-      <div className="mt-6 flex items-center">
-        {/* <h2 className="text-xl font-bold flex-grow">4+ star deals in Kitchen and Dining</h2> */}
-        <Sparkles className="w-6 h-6 text-yellow-400" />
+          <div className="relative h-64 sm:h-72 md:h-96 lg:h-96">
+            <Image
+              src={HomeAppliences} // Replace with actual image path
+              alt="HP Pavilion & Spectre Series"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-lg"
+            />
+          </div>
+          
+        </div>
       </div>
     </div>
-  );
+  </section></div>
+  )
 }
 
-export default ElectronicsDeals;
+export default ElectronicsDeals

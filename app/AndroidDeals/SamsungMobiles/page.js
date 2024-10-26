@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Smartphone, ChevronLeft, ChevronRight } from "lucide-react"
 import Iphone16 from '../../../public/Images/Iphone16.png'
-import Apple16Hero from '../../../public/Images/Apple16Hero.png'
+import SamSungHero from '../../../public/Images/SamSungHero.png'
 import Iphone15 from '../../../public/Images/Iphone15.png'
 import ShivrajMobileLogo from '../../../public/Images/ShivrajMobileLogo.png'
 import Iphone14 from '../../../public/Images/Iphone14.png'
@@ -28,79 +28,94 @@ import SamsungSmartWatchHero from "../../../public/Images/SamsungSmartWatchHero.
 import Nav from "@/components/Navbarcomponents/Nav"
 import MobileFooter from "@/components/MobileFooter/MobileFooter"
 
-const iPhoneModels = [
-  {
-    name: "iPhone 16 Mini",
-    price: "69,999",
-    discountedPrice:"59,000",
-    specs: {
-      ram: "6GB",
-      rom: "128GB",
-      colors: ["Midnight", "Starlight", "Product RED", "Blue"],
+const samsungModels = [
+    {
+      name: "Samsung Galaxy S24",
+      price: "74,999",
+      discountedPrice: "64,000",
+      specs: {
+        ram: "8GB",
+        rom: "128GB",
+        colors: ["Phantom Black", "Cream", "Lavender", "Sky Blue"],
+      },
+      images: [
+        Iphone16, // Replace with actual image variables or paths
+        Iphone14,
+        Iphone16
+      ],
     },
-    images: [
-        Iphone16,
-        Iphone15,
-        Iphone13
-    ],
-  },
-  {
-    name: "iPhone 16",
-    price: "70,999",
-    discountedPrice:"59,000",
-    specs: {
-      ram: "6GB",
-      rom: "256GB",
-      colors: ["Midnight", "Starlight", "Product RED", "Blue", "Purple"],
+    {
+      name: "Samsung Galaxy S24+",
+      price: "89,999",
+      discountedPrice: "78,000",
+      specs: {
+        ram: "12GB",
+        rom: "256GB",
+        colors: ["Phantom Black", "Cream", "Lavender", "Sky Blue", "Mint"],
+      },
+      images: [
+        Iphone16, // Replace with actual image variables or paths
+        Iphone14,
+        Iphone16
+      ],
     },
-    images: [
-        Iphone16,
-        Iphone15,
-        Iphone13
-    ],
-  },
-  {
-    name: "iPhone 16 Pro",
-    price: "1,50,999",
-    discountedPrice:"59,000",
-    
-    specs: {
-      ram: "8GB",
-      rom: "256GB",
-      colors: ["Graphite", "Gold", "Silver", "Sierra Blue"],
+    {
+      name: "Samsung Galaxy S24 Ultra",
+      price: "1,15,999",
+      discountedPrice: "99,000",
+      specs: {
+        ram: "12GB",
+        rom: "512GB",
+        colors: ["Phantom Black", "Graphite", "Sky Blue", "Red"],
+      },
+      images: [
+        Iphone16, // Replace with actual image variables or paths
+        Iphone14,
+        Iphone16
+      ],
     },
-    images: [
-        Iphone16,
-        Iphone15,
-        Iphone13
-    ],
-  },
-  {
-    name: "iPhone 16 Pro Max",
-    price: "1,51,999",
-    discountedPrice:"59,000",
-    specs: {
-      ram: "8GB",
-      rom: "512GB",
-      colors: ["Graphite", "Gold", "Silver", "Sierra Blue", "Deep Purple"],
+    {
+      name: "Samsung Galaxy Z Flip 5",
+      price: "99,999",
+      discountedPrice: "89,000",
+      specs: {
+        ram: "8GB",
+        rom: "256GB",
+        colors: ["Graphite", "Lavender", "Cream", "Mint", "Gray"],
+      },
+      images: [
+        Iphone16, // Replace with actual image variables or paths
+        Iphone14,
+        Iphone16
+      ],
     },
-    images: [
-        Iphone16,
-        Iphone15,
-        Iphone13
-    ],
-  },
-]
+    {
+      name: "Samsung Galaxy Z Fold 5",
+      price: "1,69,999",
+      discountedPrice: "1,49,000",
+      specs: {
+        ram: "12GB",
+        rom: "512GB",
+        colors: ["Icy Blue", "Phantom Black", "Cream", "Gray"],
+      },
+      images: [
+        Iphone16, // Replace with actual image variables or paths
+        Iphone14,
+        Iphone16
+      ],
+    }
+  ];
+  
 
-export default function IPhone16Series() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(iPhoneModels.map(() => 0))
+export default function SamsungDeals() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(samsungModels.map(() => 0))
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
   const nextImage = (index) => {
     setCurrentImageIndex((prev) => {
       const newIndexes = [...prev]
-      newIndexes[index] = (newIndexes[index] + 1) % iPhoneModels[index].images.length
+      newIndexes[index] = (newIndexes[index] + 1) % samsungModels[index].images.length
       return newIndexes
     })
   }
@@ -108,7 +123,7 @@ export default function IPhone16Series() {
   const prevImage = (index) => {
     setCurrentImageIndex((prev) => {
       const newIndexes = [...prev]
-      newIndexes[index] = (newIndexes[index] - 1 + iPhoneModels[index].images.length) % iPhoneModels[index].images.length
+      newIndexes[index] = (newIndexes[index] - 1 + samsungModels[index].images.length) % samsungModels[index].images.length
       return newIndexes
     })
   }
@@ -120,54 +135,52 @@ export default function IPhone16Series() {
   return ( 
 
     <>
-    
-    <Nav />
+    <Nav/>
     <div className="min-h-screen"  style={{
       background: "linear-gradient(to right, #FFDEE9, #B5FFFC)",
     }}>
 
 <section className="relative">
-        <div className=" rounded-3xl overflow-hidden">
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-24 lg:py-32">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-              <div className="mb-12 lg:mb-0 ml-4">
-                <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-5xl lg:font-bold mb-6">
-                Iphone 16 Series
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                  Experience the perfect blend of style and technology with our
-                  cutting-edge wearable devices.
-                </p>
-                {/* <div className="mt-12 grid grid-cols-3 gap-4">
-                  <div className="flex items-center">
-                    <Watch className="h-6 w-6 text-primary mr-2" />
-                    <span className="text-sm font-medium">Premium Design</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Heart className="h-6 w-6 text-primary mr-2" />
-                    <span className="text-sm font-medium">Health Tracking</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Zap className="h-6 w-6 text-primary mr-2" />
-                    <span className="text-sm font-medium">
-                      Long Battery Life
-                    </span>
-                  </div>
-                </div> */}
-              </div>
-              <div className="relative h-64 sm:h-72 md:h-96 lg:h-96 ">
-                <Image
-                  src={Apple16Hero}
-                  alt="OPPO Wearables"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-lg"
-                />
-              </div>
+  <div className="rounded-3xl overflow-hidden">
+    <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+        <div className="mb-12 lg:mb-0 ml-4">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-5xl lg:font-bold mb-6">
+            Samsung Galaxy S24 Series
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+            Discover the ultimate smartphone experience with Samsung's Galaxy S24 series, blending advanced features with stunning design.
+          </p>
+          {/* Uncomment and modify this section if needed
+          <div className="mt-12 grid grid-cols-3 gap-4">
+            <div className="flex items-center">
+              <Sparkles className="h-6 w-6 text-primary mr-2" />
+              <span className="text-sm font-medium">Dynamic AMOLED Display</span>
             </div>
-          </div>
+            <div className="flex items-center">
+              <Camera className="h-6 w-6 text-primary mr-2" />
+              <span className="text-sm font-medium">High-Resolution Camera</span>
+            </div>
+            <div className="flex items-center">
+              <BatteryCharging className="h-6 w-6 text-primary mr-2" />
+              <span className="text-sm font-medium">Long Battery Life</span>
+            </div>
+          </div> */}
         </div>
-      </section>
+        <div className="relative h-64 sm:h-72 md:h-96 lg:h-96">
+          <Image
+            src={SamSungHero} // Replace with actual image variable or path
+            alt="Samsung Galaxy S24 Series"
+            layout="fill"
+            objectFit="contain"
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       <div className="max-w-7xl mx-auto  px-4  pb-12">
@@ -176,7 +189,7 @@ export default function IPhone16Series() {
         </h1>
       {/* <h1 className="text-5xl font-extrabold text-center mb-16">Iphone 16 Series</h1> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-          {iPhoneModels.map((model, index) => (
+          {samsungModels.map((model, index) => (
             <Card key={index} className="flex flex-col justify-between ">
               {/* <CardHeader>
                               </CardHeader> */}
@@ -246,8 +259,8 @@ export default function IPhone16Series() {
       </div>
       <ContactFormModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
-    <MobileFooter />
+    <MobileFooter/>
     </>
- 
+  
   )
 }

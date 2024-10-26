@@ -10,6 +10,7 @@ import Asus from '../../public/Images/Asus.png'
 import Apple from '../../public/Images/Apple.png'
 import { Info, Sparkles } from 'lucide-react';
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
@@ -19,6 +20,7 @@ const products = [
     discount: 28,
     price: "42,999  ",
     originalPrice: 59900,
+    link: "/LaptopsDeals/HpLaptops"
   },
   {
     id: 2,
@@ -27,6 +29,7 @@ const products = [
     discount: 49,
     price: 75999,
     originalPrice: 149999,
+    link: "/products/hp-laptops"
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ const products = [
     discount: 35,
     price: 59990,
     originalPrice: 92900,
+    link: "/products/hp-laptops"
   },
   {
     id: 4,
@@ -43,6 +47,7 @@ const products = [
     discount: 14,
     price: "98,998",
     originalPrice: 20999,
+    link: "/products/hp-laptops"
   },
 ]
 
@@ -62,6 +67,7 @@ export default function LaptopsDeal () {
  <div >
       <div className="grid grid-cols-2 gap-2  rounded-xl mt-6">
         {products.map((product) => (
+          <Link key={product.id} href={product.link} passHref >
           <Card key={product.id} className="overflow-hidden">
             <CardContent className="p-2">
               <div className="relative mb-2">
@@ -94,6 +100,7 @@ export default function LaptopsDeal () {
               
             </CardContent>
           </Card>
+          </Link>
         ))}
       </div>
       {/* <div className=" text-center mt-5">

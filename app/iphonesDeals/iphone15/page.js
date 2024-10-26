@@ -23,6 +23,8 @@ import {
 import Image from "next/image"
 import { useDisclosure } from "@nextui-org/react"
 import ContactFormModal from "@/components/ContactFormModal/ContactFormModal"
+import MobileFooter from "@/components/MobileFooter/MobileFooter"
+import Nav from "@/components/Navbarcomponents/Nav"
 
 
 const iPhoneModels = [
@@ -115,7 +117,9 @@ export default function IPhone15Series() {
   }
 
   return ( 
-    <div className="min-h-screen"  style={{
+    <>
+      <Nav />
+      <div className="min-h-screen"  style={{
       background: "linear-gradient(to right, #FFDEE9, #B5FFFC)",
     }}>
 
@@ -237,5 +241,8 @@ export default function IPhone15Series() {
       </div>
       <ContactFormModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
+      <MobileFooter/>
+    </>
+   
   )
 }
