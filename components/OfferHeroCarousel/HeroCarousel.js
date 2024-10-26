@@ -114,6 +114,8 @@ import HeroImage1 from "../../public/Images/Offer1.jpg";
 import HeroImage2 from "../../public/Images/Offer1.jpg";
 import HeroImage3 from "../../public/Images/Offer1.jpg";
 import HeroImage4 from "../../public/Images/Offer4.jpeg";
+import VivoOffer from "../../public/Images/VivoOffer.jpeg";
+import SamsungOffer from "../../public/Images/SamsungOffer.jpeg";
 import HeroImage5 from "../../public/Images/Offer5.jpeg";
 import Image from "next/image";
 
@@ -133,11 +135,21 @@ export default function CarouselDApiDemo() {
    
     {
       id: 2,
-      imageUrl: HeroImage4,
+      imageUrl: VivoOffer,
       caption: "Slide 4: Discover New Gadgets",
     },
     {
       id: 3,
+      imageUrl: SamsungOffer,
+      caption: "Slide 4: Discover New Gadgets",
+    },
+    {
+      id: 4,
+      imageUrl: HeroImage4,
+      caption: "Slide 4: Discover New Gadgets",
+    },
+    {
+      id: 5,
       imageUrl: HeroImage5,
       caption: "Slide 5: Accessories and More",
     },
