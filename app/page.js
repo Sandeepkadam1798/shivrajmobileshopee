@@ -11,6 +11,7 @@ import LaptopsDeal from "@/components/LaptopsDeal/LaptopsDeal";
 import ElectronicsDeals from "@/components/ElectronicsDeals/ElectronicsDeals";
 import Footer from "@/components/Footer/Footer";
 import IphonesDealsMobileView from "./iphonesDeals/page";
+import ContactFormMain from "@/components/Contactuscomponents/ContactFormMain";
 
 export default function Home() {
   return (
@@ -46,7 +47,7 @@ export default function Home() {
       <div className="overflow-hidden  lg:hidden ">
         <ElectronicsDeals />
       </div>
-
+      {/* <ContactFormMain/> */}
       {/* <Footer /> */}
       <MobileFooter />
     </div>

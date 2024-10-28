@@ -53,7 +53,7 @@ export function NavigationMenuDemo() {
               </ListItem>
               <ListItem href="/Contactus" title=" Get in Touch">
                 <span> Email : Info@gmail.com</span>
-                <span> Phone :9284205536</span>
+                <span> Phone :9923928928</span>
               </ListItem>
               <ListItem
                 href="/docs/primitives/typography"

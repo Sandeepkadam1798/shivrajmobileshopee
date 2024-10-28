@@ -58,10 +58,14 @@ export default function MobileFooter() {
           <Search className="w-6 h-6" />
           <span className="text-xs">Search</span>
         </button>
+
+        <Link href={'/Contactus'}>
         <button className="flex flex-col items-center">
           <Phone className="w-6 h-6" />
           <span className="text-xs">Contact</span>
         </button>
+        </Link>
+   
       </nav>
       <OffersSheet isOpen1={isSheetOpen} onClose1={closeSheet} />
     </div>
